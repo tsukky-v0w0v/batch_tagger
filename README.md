@@ -12,12 +12,16 @@ pip install -r requirements.txt
 ```
 ## GPUを使用する
 https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html#requirements<br>
-インストールされるONNX Runtimeは1.18.1です。
 
-- CUDA 11.8 or 12.x
-- cuDNN 8.x or 9.x
-
-が必要です。
+CUDA12.6.1 cuDNN9.4.0で動作確認しています。
+```cmd
+pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
+```
+CUDA11.xの場合はcuDNN8.xにて
+```cmd
+pip install onnxruntime-gpu
+```
+でGPU使用ができる、はず。(未確認)
 
 ## 使い方
 `run.py`を実行します。
