@@ -1,0 +1,17 @@
+use_rating = true
+use_character = true
+use_general = true
+
+character_threshold = 0.85
+general_threshold = 0.35
+use_recommended_threshold = false
+
+model = "wd-eva02-large-tagger-v3"
+batch_size = 10
+
+overwrite = true
+weighted_captions = false
+recursive = true
+additional_tag = []
+exclude_tag = []
+all_sort = false
