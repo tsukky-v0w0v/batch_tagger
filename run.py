@@ -43,7 +43,7 @@ def load_toml(file_path):
 
 
 def image_files_list(args):
-    image_extensions = [".png", ".jpg", "jpeg", "webp"]
+    image_extensions = [".png", ".jpg", ".jpeg", ".webp"]
     target_path = Path(args.target)
     if target_path.is_file():
         if target_path.suffix.lower() in image_extensions:
@@ -55,7 +55,7 @@ def image_files_list(args):
         if args.recursive:
             files = target_path.rglob("*")
         else:
-            files = target_path.glob("")
+            files = target_path.glob("*")
         image_files = [file for file in files if file.suffix.lower() in image_extensions and file.is_file()]
         return image_files
 
